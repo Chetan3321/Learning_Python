@@ -34,3 +34,34 @@ def display(glassStack):
     for i in range(x-1,-1,-1):
         print(glassStack[i])
 
+
+#add elements to stack
+element='glass1'
+print("Pushing element ",element)
+opPush(glassStack,element)
+element='glass2'
+print("Pushing element ",element)
+opPush(glassStack,element)
+#display number of elements in stack
+print("Current number of elements in stack is",size(glassStack))
+#delete an element from the stack
+element=opPop(glassStack)
+print("Popped element is",element)
+#add new element to stack
+element='glass3'
+print("Pushing element ",element)
+opPush(glassStack,element)
+#display the last element added to the
+#stack
+print("top element is",top(glassStack))
+#display all elements in the stack
+display(glassStack)
+
+#delete all elements from stack
+while True:
+item=opPop(glassStack)
+if item == None:
+ print("Stack is empty now")
+ break
+else:
+ print("Popped element is",item)
